@@ -10,6 +10,12 @@
   -#         %li= msg
   = form_for @user do |f|
     %p
+      = f.label :first_name
+      = text_field :first_name
+    %p
+      = f.label :last_name
+      = f.text_field :last_name
+    %p
       = f.label :username
       = f.text_field :username
     %p
