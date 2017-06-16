@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :followees, :through => :followings_as_follower
 
   has_many :tweets
-  
+
   before_save { self.email = email.downcase }
   validates :username,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -17,5 +17,17 @@ class User < ActiveRecord::Base
 
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+
+  def follow(other_user)
+  	followees << other_user
+  end
   
+  def unfollow(other_user)
+  	followees.delete(other_user)
+  end
+
+  def following?(other_user)
+  	folloing.include?(other_user)
+  end	
+
 end

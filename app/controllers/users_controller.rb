@@ -15,6 +15,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def followers
+  end
+
+  def followees
+  	
+  end
+
   # def show
   #   unless current_user.id == params[:id].to_i
   #     flash[:error] = 'You are not that user!'
