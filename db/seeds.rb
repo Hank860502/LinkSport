@@ -1,3 +1,11 @@
+User.create!(
+  first_name: "Hank",
+    last_name: "Chen",
+    username: "hc123",
+    email: "hank@hank.com",
+    password: "123123"
+)
+
 20.times do (
   User.create!(
     first_name: Faker::Name.first_name,
@@ -32,11 +40,3 @@ end
     )
   )
 end
-
-User.create!(
-  first_name: "Hank",
-    last_name: "Chen",
-    username: "hc123",
-    email: "hank@hank.com",
-    password: "123123"
-)
