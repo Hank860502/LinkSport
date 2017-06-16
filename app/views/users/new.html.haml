@@ -1,0 +1,22 @@
+%div.card-panel.teal.lighten-3.green-text.text-darken-2.center-align
+  -# - if @user.errors.any?
+  -#   #error_explanation
+  -#     %h2.error
+  -#       = pluralize(@user.errors.count, "error")
+  -#       prohibited
+  -#       this user from being saved:
+  -#     %ul.error
+  -#       - @user.errors.full_messages.each do |msg|
+  -#         %li= msg
+  = form_for @user do |f|
+    %p
+      = f.label :username
+      = f.text_field :username
+    %p
+      = f.label :email
+      = f.text_field :email
+    %p
+      = f.label :password, "Password (min. 6 characters)"
+      = f.password_field :password
+    %p
+      = f.submit

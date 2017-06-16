@@ -1,0 +1,24 @@
+%nav
+  .nav-wrapper
+    %a.brand-logo.center{:href => "/welcome"}
+      %img.bootcamp.hide-on-med-and-down{src: "/bootcamp.png"}
+
+    %ul#nav-mobile.left
+      - if current_user
+        %li
+          = link_to "#{current_user.username}", user_path(current_user.id)
+      %li
+        = link_to "Home", root_path
+    %ul#nav-mobile.right
+      - if current_user && current_user.admin
+        %li
+          =link_to "Admin", admin_path
+      - if current_user
+        %li
+          =link_to "Log out", logout_path, method: "delete"
+      -else
+        %li
+          =link_to "Log in", new_session_path
+        %li
+          =link_to 'Register', new_user_path
+

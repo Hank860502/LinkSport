@@ -1,0 +1,7 @@
+- flash.each do |key, value|
+  - if key == "success"
+    %div{class: "alert alert-#{key} waves-effect waves-light btn green"}
+      =  value
+  - else
+    %div{class: "offset-s3 alert alert-#{key} waves-effect waves-light btn red"}
+      =  value
