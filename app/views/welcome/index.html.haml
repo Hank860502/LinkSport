@@ -1,1 +1,25 @@
-hello
+-if @user
+	-array = []
+	-@user.followees.each do |followee|
+		-followee.tweets.each do |tweet|
+			-array<<tweet
+	-sorted = array.sort_by &:created_at
+	-sorted.each do |tweet|
+		.row
+			.col.s12.m6
+				.card.blue-grey.darken-1
+					.card-image
+						.col.s3.m3
+							%img.responsive-img{:alt => "profile image", :src => "#{tweet.user.image}"}/
+					.card-content.white-text
+						%span.card-title= tweet.user.username
+						%p= tweet.body
+						%p= tweet.created_at.to_formatted_s(:db)
+					.card-action
+						%a.btn.waves-effect.waves-light.orange{:href => "/tweets/#{tweet.id}/like"}
+							= tweet.likes.count
+							Likes
+						- if tweet.user.followers.include?(@current_user)
+							%a.btn.waves-effect.waves-light.light-blue{:href => "/users/#{@current_user.id}/follow/#{tweet.user.id}/destroy"} Unfollow
+						- else
+							%a.btn.waves-effect.waves-light.light-blue{:href => "/users/#{@current_user.id}/follow/#{tweet.user.id}"} Follow

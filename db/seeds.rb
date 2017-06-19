@@ -21,6 +21,7 @@ end
 100.times do (
   Following.create!(
     follower_id: rand(1..20),
+    # causes problem, user can follow himself or follow others several times.
     followee_id: rand(1..20)
     )
   )
