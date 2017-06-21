@@ -23,3 +23,5 @@
 							%a.btn.waves-effect.waves-light.light-blue{:href => "/users/#{@current_user.id}/follow/#{tweet.user.id}/destroy"} Unfollow
 						- else
 							%a.btn.waves-effect.waves-light.light-blue{:href => "/users/#{@current_user.id}/follow/#{tweet.user.id}"} Follow
+-else
+	welcome

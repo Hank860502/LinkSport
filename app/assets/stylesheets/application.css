@@ -11,4 +11,27 @@
 	background-color: transparent 
 }
 
+.nav-width{
+	width: 75%;
+	margin: 0 auto;
+}
+
 /*Login page*/
+label{
+	color: white
+}
+
+.login-form, .register-form{
+	width: 50%;
+	margin: 0 auto 
+}
+
+
+/*=====User Page=====*/
+.white-margin{
+  padding: 2rem 2rem;
+}
+
+.user-page{
+  background: #e6e6e6;
+}

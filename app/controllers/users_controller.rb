@@ -7,12 +7,16 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:success] = "New user added!"
+      flash[:success] = "成功註冊新使用者"
       redirect_to root_path
     else
-      flash[:error] = "Invalid Input!"
+      flash[:error] = "資料不完整或有誤"
       redirect_to new_user_path
     end
+  end
+
+  def show
+    
   end
 
   def followers

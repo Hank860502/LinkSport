@@ -1,4 +1,4 @@
-%div.card-panel.teal.lighten-3.green-text.text-darken-2.center-align
+%div.card-panel.teal.lighten-3.center-align.login-form
   = form_for(:session, url: login_path) do |f|
     %p
       = f.label :username
@@ -6,5 +6,5 @@
     %p
       = f.label :password
       = f.password_field :password
-    %p
+    %a.waves-effect.waves-light.btn
       = f.submit "Log in"
