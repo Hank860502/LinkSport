@@ -32,6 +32,24 @@ label{
   padding: 2rem 2rem;
 }
 
+body{
+  background: #e6e9ec;
+}
+
 .user-page{
-  background: #e6e6e6;
+	background-color: #ffffff;
+	display: flex;
+}
+
+.user-page-left{
+	width: 70%;
+	display: flex;
+	justify-content: center;
+}
+
+.user-page-right{
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	background-color: #e6e9ec;
 }
