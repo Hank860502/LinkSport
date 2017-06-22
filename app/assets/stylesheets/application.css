@@ -63,7 +63,9 @@ label{
 }
 
 .user-name, .user-info{
+	display: flex;
 	text-align: center;
+	justify-content: center;
 }
 
 .user-info img{
@@ -73,25 +75,43 @@ label{
 }
 
 .user-info{
-	display: flex;
+  padding: 2rem 2rem;
+  align-items: center;
 }
 
 .user-info-physical{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .user-info-training{
 	display: flex;
-	flex-direction: column;
 }
 
 .user-info-right{
 	width: 100%;
+  padding: 0rem 2rem;
 }
-.aaa{
-	display: flex
+.user-info-block{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	text-align: left;
 }
+
+.training-left, .training-right{
+	width: 50%;
+}
+
+.user-social{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 15%;
+}
+
 /*=====User Page Right=====*/
 
 
