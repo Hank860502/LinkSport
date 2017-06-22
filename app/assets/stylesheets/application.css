@@ -1,3 +1,8 @@
+/*Body*/
+body{
+  background: #e6e9ec;
+}
+
 /*=====Navbar=====*/
 .nav-wrapper{
 	background: #283e4a;
@@ -32,20 +37,49 @@ label{
   padding: 2rem 2rem;
 }
 
-body{
-  background: #e6e9ec;
-}
-
 .user-page{
 	background-color: #ffffff;
 	display: flex;
 }
 
+/*=====User Page Left=====*/
+
 .user-page-left{
 	width: 70%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
+
+.user-name, .user-info{
+	text-align: center;
+}
+
+.user-info img{
+	height: 128px;
+	width: 128px;
+	border-radius: 50%;
+}
+
+.user-info{
+	display: flex;
+}
+
+.user-info-physical{
+	display: flex;
+	justify-content: space-around;
+}
+
+.user-info-training{
+	display: flex;
+	justify-content: space-around;
+}
+
+.user-info-right{
+	width: 100%;
+}
+/*=====User Page Right=====*/
+
 
 .user-page-right{
 	width: 30%;
