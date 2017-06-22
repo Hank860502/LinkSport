@@ -72,11 +72,14 @@ label{
 
 .user-info-training{
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
 }
 
 .user-info-right{
 	width: 100%;
+}
+.aaa{
+	display: flex
 }
 /*=====User Page Right=====*/
 

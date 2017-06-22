@@ -7100,3 +7100,215 @@ Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/assets/application.self-6c33cd72c6e26725b9e305791806aa539952fb5e78b3bf8b2be5608313e409aa.css?body=1" for ::1 at 2017-06-22 13:30:23 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:38:09 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-71d19326e61d141d35abeed3ede7c542f8e24849506f072e135ad54297ae5fb9.css?body=1" for ::1 at 2017-06-22 13:38:09 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:38:37 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-585b0b2f16521928a0065fac193b269898adbd5b492c19c660b2c368dacb8a19.css?body=1" for ::1 at 2017-06-22 13:38:37 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:42:26 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:42:49 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:43:39 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:47:22 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:48:46 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-896be31eb149c5092f0978e7a57805e9b16ed3c85eb445b4586dc7e9a7da344d.css?body=1" for ::1 at 2017-06-22 13:48:46 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:49:49 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:50:09 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:52:50 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-b41e4ce4c2713541815b6add6dcd35e814a5958790dd352ab3ad16bb36915cb1.css?body=1" for ::1 at 2017-06-22 13:52:50 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:53:34 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:54:12 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:54:27 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:54:48 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:55:02 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:55:19 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:55:32 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:55:38 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:56:09 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.6ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 13:56:22 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.2ms)
