@@ -7312,3 +7312,286 @@ Processing by UsersController#show as HTML
   Rendered _nav.html.haml (1.2ms)
   Rendered _flash.html.haml (0.1ms)
 Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:34:03 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:35:29 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-c8e029e4db7a6463ee1cdc2b33428efdb1e09fc21d5937ac923c6d4325cf1647.css?body=1" for ::1 at 2017-06-22 15:35:29 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:36:59 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.2ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/assets/followings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/assets/application.self-c8e029e4db7a6463ee1cdc2b33428efdb1e09fc21d5937ac923c6d4325cf1647.css?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:36:59 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:37:06 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:38:22 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-82b02e6498757816291138d659c6bd153d642a99f10f58c53e758945bcbf9ded.css?body=1" for ::1 at 2017-06-22 15:38:22 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:38:24 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-82b02e6498757816291138d659c6bd153d642a99f10f58c53e758945bcbf9ded.css?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/assets/followings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-06-22 15:38:24 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:38:28 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-5a29cd87cbf317e1c2f363629b5bf0f61a1b48845e37001ee1c50e00ae3e8fd0.css?body=1" for ::1 at 2017-06-22 15:38:28 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:38:34 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-2e1ab42402f9cffa44862c80b1331f1a3b4100de805c21ddf1ec54aee0f2c8f0.css?body=1" for ::1 at 2017-06-22 15:38:34 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:38:51 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:40:02 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:40:03 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:40:03 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-2e1ab42402f9cffa44862c80b1331f1a3b4100de805c21ddf1ec54aee0f2c8f0.css?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/assets/followings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-06-22 15:40:03 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:40:12 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:40:13 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-2e1ab42402f9cffa44862c80b1331f1a3b4100de805c21ddf1ec54aee0f2c8f0.css?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/assets/followings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-06-22 15:40:13 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:41:10 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-40363e48effd7f3d665dd8365a3db2d600bdfdcbbaa47651fb564380469f89b4.css?body=1" for ::1 at 2017-06-22 15:41:10 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-22 15:41:13 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)

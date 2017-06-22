@@ -1,5 +1,16 @@
 /*Body*/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+.font-en {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font-ch{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
 body{
+  font-family: 'Noto Sans TC', sans-serif;
   background: #e6e9ec;
 }
 
