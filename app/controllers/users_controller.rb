@@ -16,7 +16,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+
+  end
+
+  def find
+    @user = User.find_by(username: params[:username])
   end
 
   def followers

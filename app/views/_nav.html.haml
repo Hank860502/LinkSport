@@ -4,6 +4,13 @@
       %ul#nav-mobile.left
         %li.nav-logo
           = link_to image_tag("/logo.png"), root_path
+          %li
+            %form{:action => "/users/find"}
+              .input-field
+                %input#search{:required => "", :type => "search", :name => "username"}
+                %label.label-icon{:for => "search"}
+                  %i.material-icons search
+
       %ul#nav-mobile.right
         - if current_user && current_user.admin
           %li
@@ -13,24 +20,8 @@
             = link_to "#{current_user.username}", user_path(current_user.username)
           %li
             =link_to "Log out", logout_path, method: "delete"
-          %li
-            %form
-              .input-field
-                %input#search{:required => "", :type => "search"}/
-                %label.label-icon{:for => "search"}
-                  %i.material-icons search
-                %i.material-icons close
-
         -else
           %li
             =link_to "Log in", login_path
           %li
             =link_to 'Register', register_path
-          %li
-            %form
-              .input-field
-                %input#search{:required => "", :type => "search"}/
-                %label.label-icon{:for => "search"}
-                  %i.material-icons search
-                %i.material-icons close
-
