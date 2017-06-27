@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def find
     @user = User.find_by(username: params[:username])
+    
   end
 
   def followers

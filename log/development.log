@@ -10321,3 +10321,461 @@ Processing by UsersController#show as HTML
   Rendered _nav.html.haml (1.6ms)
   Rendered _flash.html.haml (0.1ms)
 Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2017-06-26 22:11:38 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (298.4ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered _nav.html.haml (19.6ms)
+  Rendered _flash.html.haml (1.1ms)
+Completed 200 OK in 597ms (Views: 586.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/login" for ::1 at 2017-06-26 22:11:44 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A345zy3lah5UXsnoT+xZblTh3nhDi/VLAtJG15AEp8HjWFAqJvqsjvVLbRXua5P+fYiAJgE/Xnm6Ch5Ev2rOyg==", "session"=>{"username"=>"hc123", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "hc123"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 86ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/sessions/new" for ::1 at 2017-06-26 22:11:44 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered _nav.html.haml (2.4ms)
+  Rendered _flash.html.haml (0.2ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for ::1 at 2017-06-26 22:11:48 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1lljZfXLXoPox1MNGtSBStDkm97uiGpA1YPxayCL3CY2fwqA/tSYE0nS9/C7U0va+Y3FgKw8wXJtW6n4D+W1LQ==", "session"=>{"username"=>"hc123", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "hc123"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 71ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-06-26 22:11:48 +0800
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 2]]
+  [1m[35mTweet Load (1.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 13]]
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 15]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 4]]
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 13], ["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 15]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 15]]
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 20]]
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 20]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 28]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 13], ["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 31]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 13], ["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 35]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 35]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  Rendered welcome/index.html.haml within layouts/application (176.6ms)
+  Rendered _nav.html.haml (0.8ms)
+  Rendered _flash.html.haml (0.2ms)
+Completed 200 OK in 206ms (Views: 188.5ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/users/find?username=s" for ::1 at 2017-06-26 22:12:05 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"username"=>"s", "id"=>"find"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.3ms)
+  Rendered _flash.html.haml (0.2ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-06-26 22:14:46 +0800
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 2]]
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 13]]
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 15]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 4]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 13], ["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 15]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 15]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 20]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 20]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 28]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 13], ["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 31]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 13], ["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 35]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 35]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 15], ["id", 2]]
+  Rendered welcome/index.html.haml within layouts/application (37.4ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 66ms (Views: 45.7ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-26 22:14:49 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:16:32 +0800
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.6) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (303.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (334.5ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:17:27 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (36.6ms)
+  Rendered _flash.html.haml (1.6ms)
+Completed 200 OK in 249ms (Views: 228.7ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:25:23 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:25:38 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:26:02 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:26:12 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:26:32 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:27:18 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:29:29 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (0.9ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 41ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-971848fa377552707351bd1803614d641be371abd36e5a839e38e81d1040b513.css?body=1" for ::1 at 2017-06-27 11:29:29 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:36:54 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.5ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:40:10 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-fbefca5d765750da00940aea1655bd9a8649ed4c2d39243db6e477225b0f577a.css?body=1" for ::1 at 2017-06-27 11:40:10 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:41:19 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-959498e12d97c9b79ec6417e091ab050b887189768a36e8b33ba5226236f8baf.css?body=1" for ::1 at 2017-06-27 11:41:19 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:42:46 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-beae62d1e88d3fd84b11a3d43f1e3904ca6fa1fcc8523a414e8a92cafb77f152.css?body=1" for ::1 at 2017-06-27 11:42:46 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:42:48 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:43:39 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:43:40 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:44:40 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-1d661a1c04535f8c56417a222bf0411de0efd91660411820cdf6ce0e08628bdb.css?body=1" for ::1 at 2017-06-27 11:44:40 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:45:29 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-be163e82f4bdf1c578ad766a0f3ba417081e5a734b81c01d7c228ce3ad0c3cad.css?body=1" for ::1 at 2017-06-27 11:45:29 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:45:45 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-5bfdffde1a1e40ad2621ca3d5e3e33112ed9c2dfaf887ddd97f1c1fe8f5ccffe.css?body=1" for ::1 at 2017-06-27 11:45:45 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:45:56 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:46:31 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-2930c1d71d7778e7e5c23ba8082ab68194faa29bb9235ece07036a9848b2518e.css?body=1" for ::1 at 2017-06-27 11:46:31 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:46:40 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.1ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-b6425e6970be9a385c82b59d73c6be7b3e9d19b792764ba0a7e4188c98ef8115.css?body=1" for ::1 at 2017-06-27 11:46:40 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:46:54 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-05b7e45a37c4dccc9bed37218c1370b8e7d633f5275dcf1e897dc80926cbf9cf.css?body=1" for ::1 at 2017-06-27 11:46:54 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-27 11:47:04 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.0ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-ac988b18677a63063c0cb856939e77047f007263421afcbd708cdde25741796b.css?body=1" for ::1 at 2017-06-27 11:47:04 +0800
