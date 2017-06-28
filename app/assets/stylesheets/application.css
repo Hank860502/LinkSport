@@ -70,6 +70,12 @@ label{
 	justify-content: center;
 }
 
+.user-avatar{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .user-info img{
 	height: 128px;
 	width: 128px;

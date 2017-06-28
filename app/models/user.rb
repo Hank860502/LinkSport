@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 	include BCrypt
+
+  # mount_uploader :avatar, AvatarUploader
+  
 	has_many :followings_as_follower, :class_name=> "Following", foreign_key: :follower_id
   has_many :followings_as_followee, :class_name=> "Following", foreign_key: :followee_id
 
@@ -17,7 +20,7 @@ class User < ActiveRecord::Base
 
   has_secure_password
   validates :password, confirmation: true, presence: true, length: { minimum: 6 }
-
+  
   def follow(other_user)
   	followees << other_user
   end
