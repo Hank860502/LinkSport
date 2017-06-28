@@ -12070,3 +12070,13 @@ Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/assets/application.self-252f26424ecf654b54403c3e4178629926e16c97d7f73a664e5aefa831a5516b.css?body=1" for ::1 at 2017-06-28 13:39:33 +0800
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-28 15:00:11 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  Rendered users/show.html within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered _nav.html.haml (1.2ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.2ms)
