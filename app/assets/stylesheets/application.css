@@ -109,17 +109,25 @@ label{
 
 .user-social{
 	width: 100%;
+}
+
+.user-followers, .user-followees{
 	display: flex;
-	justify-content: space-between;
-	padding-left: 15%;
+	justify-content: space-around;
+	font-size: 15px;
 }
 
 /*=======athletic=====*/
 .user-page-left-athletic{
   margin-top: 2rem;
  	background-color: #ffffff;
- 	padding: 0 2rem;
 
+}
+
+.athletic-record{
+	display: flex;
+	width: 50%;
+	justify-content: space-around;	
 }
 
 
