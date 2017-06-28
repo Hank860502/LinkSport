@@ -121,7 +121,6 @@ label{
 .user-page-left-athletic{
   margin-top: 2rem;
  	background-color: #ffffff;
-
 }
 
 .athletic-record{
@@ -130,6 +129,10 @@ label{
 	justify-content: space-around;	
 }
 
+.user-page-left-about{
+	margin-top: 2rem;
+ 	background-color: #ffffff;
+}
 
 
 /*=====User Page Right=====*/
