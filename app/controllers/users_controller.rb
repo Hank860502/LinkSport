@@ -16,7 +16,18 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = current_user
+  end
 
+  def update
+    # for user toupload avatar
+    @user = current_user
+    if @user.update(user_params)
+      redirect_to user_path
+    else
+      flash[:error] = "暫時無法上傳照片"
+      redirect_to user_path
+    end
   end
 
   def find
@@ -42,6 +53,7 @@ class UsersController < ApplicationController
 
   # private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :avatar)
   end
+
 end

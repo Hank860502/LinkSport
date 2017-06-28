@@ -24,8 +24,8 @@
     %p
       = f.label :password, "密碼 (最少六個字)"
       = f.password_field :password
-    %p
-      = f.label :password, "確認密碼"
-      = f.password_field :password_confirmation
+    / %p
+    /   = f.label :password, "確認密碼"
+    /   = f.password_field :password_confirmation
     %a.waves-effect.waves-light.btn
       = f.submit

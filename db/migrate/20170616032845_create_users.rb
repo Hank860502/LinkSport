@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :last_name
     	t.string :username
       t.string :email
-      t.string :avatar, :default_url => "/avatar.png"
+      t.string :avatar
       t.string :password_digest
       t.boolean :admin, default: false
       t.integer :itf
