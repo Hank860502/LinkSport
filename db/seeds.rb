@@ -21,8 +21,8 @@ User.create!(
     last_name: Faker::Name.last_name,
     username: Faker::Internet.user_name,
     email: Faker::Internet.email,
-    avatar: Faker::Avatar.image,
     password: "123123"
+    # avatar: Faker::Avatar.image,
     # itf:,
     # utr:,
     # ntr:,

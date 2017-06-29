@@ -17,8 +17,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    print "=================="
     # render edit_user_path
+  end
+
+  def edit
+    @user = current_user
   end
 
   def update
@@ -40,7 +43,9 @@ class UsersController < ApplicationController
       redirect_to user_path(@user.first.id)
       # using where method returns an array of model
     else
-      redirect_to user_path(current_user.id)
+      flash[:error] = "找不到使用者"
+      # redirect_to user_path(current_user.id)
+      redirect_to request.referrer
     end
   end
 

@@ -10,22 +10,31 @@
         .user-info
           .user-avatar
             =image_tag @user.avatar_url
-            = form_for @user do |f|
-              %p
-                = f.label "更換大頭貼"
-                = f.file_field :avatar, class: "avatar-upload"
-              %a.waves-effect.waves-light.btn
-                = f.submit "更換大頭貼"
+            -if @user == current_user
+              = form_for @user do |f|
+                %p
+                  = f.label "更換大頭貼"
+                  = f.file_field :avatar, class: "avatar-upload"
+                %a.waves-effect.waves-light.btn
+                  = f.submit "更換大頭貼"
           .user-info-right
             .user-info-physical
               -if @user.righthanded
                 %p Righthanded
               -else
                 %p Lefthanded
-              %p
-                = @user.height
-              %p
-                =@user.weight
+              -if @user.height.present?
+                %p
+                  = @user.height
+                  cm
+              -else
+                %p N/A
+              -if @user.weight.present?
+                %p
+                  = @user.weight
+                  kg
+              -else
+                %p N/A
             .user-info-training
               .training-left
                 .user-info-block
@@ -48,6 +57,8 @@
                     %p 粉絲
                     %p
                       =@user.followees.count
+        -if @user == current_user
+          %a.waves-effect.waves-light.btn{:href => "/users/#{@user.id}/edit"} update file
       %section.user-page-left-athletic
         %ul#tabs-swipe-demo.tabs
           %li.tab.col.s3
