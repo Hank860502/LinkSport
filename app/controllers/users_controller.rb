@@ -33,9 +33,12 @@ class UsersController < ApplicationController
   end
 
   def find
-    @user = User.find_by(username: params[:query])
+    @q = params[:query]
+    @user = User.where("username LIKE ? or email LIKE ?", @q, @q)
+    # @user = User.find_by(username: params[:query])
     if @user.present?
-      redirect_to user_path(@user.id)
+      redirect_to user_path(@user.first.id)
+      # using where method returns an array of model
     else
       redirect_to user_path(current_user.id)
     end
