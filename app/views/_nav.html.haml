@@ -5,9 +5,9 @@
         %li.nav-logo
           = link_to image_tag("/logo.png"), root_path
           %li
-            %form{:action => "/users/find"}
+            =form_tag find_users_path do
               .input-field
-                %input#search{:required => "", :type => "search", :name => "username"}
+                %input#search{:required => "", :placeholder => "Search for a user", :type => "text", :name => "query"}
                 %label.label-icon{:for => "search"}
                   %i.material-icons search
 
@@ -17,7 +17,7 @@
             =link_to "Admin", admin_path
         - if current_user
           %li
-            = link_to "#{current_user.username}", user_path(current_user.username)
+            = link_to "#{current_user.username}", user_path(current_user.id)
           %li
             =link_to "Log out", logout_path, method: "delete"
         -else

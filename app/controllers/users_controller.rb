@@ -16,8 +16,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
-    
+    @user = User.find(params[:id])
+    print "=================="
     # render edit_user_path
   end
 
@@ -33,8 +33,12 @@ class UsersController < ApplicationController
   end
 
   def find
-    @user = User.find_by(username: params[:username])
-    
+    @user = User.find_by(username: params[:query])
+    if @user.present?
+      redirect_to user_path(@user.id)
+    else
+      redirect_to user_path(current_user.id)
+    end
   end
 
   def followers

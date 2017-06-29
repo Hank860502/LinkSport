@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   get 'register' => 'users#new'
+  post 'users/find' => 'users#find', as: 'find_users'
 end
