@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20170616073916) do
     t.integer  "toefl"
     t.integer  "act"
     t.date     "birthday"
+    t.text     "about"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
   end

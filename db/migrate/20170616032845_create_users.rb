@@ -19,6 +19,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :toefl
       t.integer :act
       t.date :birthday
+      t.text :about
 
       t.timestamps null: false
     end

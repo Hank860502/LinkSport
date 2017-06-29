@@ -1,9 +1,18 @@
 User.create!(
-  first_name: "Hank",
-    last_name: "Chen",
+  first_name: "漢宇",
+    last_name: "陳",
     username: "hc123",
     email: "hank@hank.com",
-    password: "123123"
+    password: "123123",
+    itf: 315,
+    utr: 11,
+    ntr: 30,
+    height: 180,
+    weight: 78,
+    sat: 1780,
+    toefl: 97,
+    birthday: "1997/05/02",
+    about: "我是陳漢宇"
 )
 
 20.times do (
@@ -13,18 +22,19 @@ User.create!(
     username: Faker::Internet.user_name,
     email: Faker::Internet.email,
     avatar: Faker::Avatar.image,
-    password: "123123",
-    itf:,
-    utr:,
-    ntr:,
-    righthanded:,
-    double_handed_backhand:,
-    height:,
-    weight:,
-    sat:,
-    toefl:,
-    act:,
-    birthday:,
+    password: "123123"
+    # itf:,
+    # utr:,
+    # ntr:,
+    # righthanded:,
+    # double_handed_backhand:,
+    # height:,
+    # weight:,
+    # sat:,
+    # toefl:,
+    # act:,
+    # birthday:,
+    # about:
       )
   )
 end
