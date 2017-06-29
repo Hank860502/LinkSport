@@ -22570,3 +22570,884 @@ Processing by UsersController#show as HTML
   Rendered _nav.html.haml (0.6ms)
   Rendered _flash.html.haml (0.2ms)
 Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2017-06-28 20:34:59 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"El/h+HpO9nJcdMkwWYubXUUAOhtoUxUK9jixMYF4vj+MO1I2T/gUlrcT3rRRsVTgMRmKpQ0Q7nk7y7byXSz1EQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-06-28 20:34:59 +0800
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered welcome/index.html.haml within layouts/application (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered _nav.html.haml (2.2ms)
+  Rendered _flash.html.haml (0.2ms)
+Completed 200 OK in 43ms (Views: 30.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/login" for ::1 at 2017-06-28 20:35:05 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered _nav.html.haml (1.8ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2017-06-28 20:35:15 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hgKPJLI5tRJoT3l2DY1HNuxYWJpup+2VVsYJqIxnTVIYZjzqh49X9oMobvIFt4iLmEHoJAvkFuabNQ5rUDMGfA==", "session"=>{"username"=>"hc123", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "hc123"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2017-06-28 20:35:15 +0800
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 16]]
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 20]]
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 12]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 11]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 16], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 18]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 12], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 27]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 12], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 30]]
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 12], ["id", 1]]
+  Rendered welcome/index.html.haml within layouts/application (43.4ms)
+  Rendered _nav.html.haml (0.5ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 60ms (Views: 52.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-28 20:35:31 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (2.7ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for ::1 at 2017-06-28 20:35:40 +0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vcSRgl15RyvWgqBKKF2QFzbuqCYOI91/0+NYPtDDf80joCJMaM+lzz3lt84gZ1+qQvcYmGtgJgweEF/9DJc04w==", "user"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fcfec8aaa20 @tempfile=#<Tempfile:/var/folders/96/b_kg9ffd463fsvz2s5cfxm2h0000gn/T/RackMultipart20170628-4672-85sagr.jpg>, @original_filename="2222.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"2222.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('hank@hank.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "avatar" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["avatar", "2222.jpg"], ["updated_at", "2017-06-28 12:35:40.438998"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 15ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-28 20:35:40 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.9ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-28 20:35:58 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (2.0ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-28 20:36:11 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (2.8ms)
+  Rendered _nav.html.haml (0.5ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-06-28 20:36:13 +0800
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 16]]
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 20]]
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 12]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 11]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 16], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 18]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 12], ["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 27]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 12], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1[0m  [["tweet_id", 30]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1  [["followee_id", 12], ["id", 1]]
+  Rendered welcome/index.html.haml within layouts/application (17.1ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-28 20:36:34 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (2.3ms)
+  Rendered _nav.html.haml (0.5ms)
+  Rendered _flash.html.haml (0.2ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-28 20:36:38 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.8ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2017-06-28 20:36:48 +0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZeafyKUThaoWh5BOe1RLJDnSoNmpL+AiyfLg2YqLzu/7giwGkKVnTv3gh8pzboSZTcsQZ8xsG1EEAecaVt+FwQ==", "user"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fcfe3b3d930 @tempfile=#<Tempfile:/var/folders/96/b_kg9ffd463fsvz2s5cfxm2h0000gn/T/RackMultipart20170628-4672-1buzjns.JPG>, @original_filename="20160504_DBC_096_H (1).JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"20160504_DBC_096_H (1).JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('hank@hank.com') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "avatar" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["avatar", "20160504_DBC_096_H__1_.JPG"], ["updated_at", "2017-06-28 12:36:48.805551"], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-28 20:36:48 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.7ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-28 21:01:10 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.6ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 11:48:49 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (328.6ms)
+  Rendered _nav.html.haml (2.9ms)
+  Rendered _flash.html.haml (1.2ms)
+Completed 200 OK in 606ms (Views: 560.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:12:19 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.6ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-201afa8147a62608ca4e7105a91098873d05e447ad9c5b1ef8c8a6ae25d26ab1.css?body=1" for ::1 at 2017-06-29 12:12:19 +0800
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:13:11 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (7.0ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:13:42 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/Users/hank8652/Desktop/LinkSport/app/views/users/show.html.haml:14: syntax error, unexpected tSTRING_BEG, expecting ')'
+..._false(( f.file_field :avatar "更換大頭貼"
+...                               ^):
+  app/views/users/show.html.haml:14: syntax error, unexpected tSTRING_BEG, expecting ')'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.8ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:13:51 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (8.7ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:17:09 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (8.7ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:17:22 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.3ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-83f7b824496b23d9df62f9a79b9378eb5c92b60cb6227fbd6314fb7fdeb7af21.css?body=1" for ::1 at 2017-06-29 12:17:22 +0800
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:17:30 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.5ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-4ae2757cdde3ba51ce77a6b63d643d0ba552bcd3c3780dbc1807cda16ae90911.css?body=1" for ::1 at 2017-06-29 12:17:30 +0800
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:17:37 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.5ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-242924c1a0e82b05c2ca46e12f1c81fe651069bc74591cffb460b25adf31e9f3.css?body=1" for ::1 at 2017-06-29 12:17:37 +0800
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:18:05 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (2.1ms)
+  Rendered _nav.html.haml (0.5ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-53b277f0c61a7d8d851523c65eb773d6fd6f2d89a706697c9fea324c386c098c.css?body=1" for ::1 at 2017-06-29 12:18:05 +0800
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:18:11 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.5ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-7d22b9ba54a0fac11f8fbacdaf062a0de584b5d8e3335bda5f719164554d913a.css?body=1" for ::1 at 2017-06-29 12:18:11 +0800
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:18:33 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.5ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-5265c07149393af943dc6a5ecb31ab7ea1b92c8d3b0e0a95407ecad3369a665f.css?body=1" for ::1 at 2017-06-29 12:18:33 +0800
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:20:03 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.3ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-27e4c6cc5cf0db4ea3e713028e13e7acf7e2febc9d579dc27ed85dccde92f1b4.css?body=1" for ::1 at 2017-06-29 12:20:03 +0800
+
+
+Started GET "/users/1" for ::1 at 2017-06-29 12:21:43 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.8ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 38ms (Views: 17.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:21:45 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.7ms)
+  Rendered _nav.html.haml (0.5ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:21:53 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.4ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:21:55 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.3ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-06-29 12:21:56 +0800
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (2.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 16]]
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1  [["user_id", 20]]
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."user_id" = $1[0m  [["user_id", 12]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1  [["tweet_id", 11]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["followee_id", 16], ["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1  [["tweet_id", 18]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["followee_id", 12], ["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1  [["tweet_id", 27]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["followee_id", 12], ["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "likes" WHERE "likes"."tweet_id" = $1  [["tweet_id", 30]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1 AND "users"."id" = $2 LIMIT 1[0m  [["followee_id", 12], ["id", 1]]
+  Rendered welcome/index.html.haml within layouts/application (76.5ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 96ms (Views: 83.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:21:59 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.7ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:22:01 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.6ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:22:02 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.9ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:22:41 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.1ms)
+
+NameError (undefined local variable or method `update_user_path' for #<UsersController:0x007fba82ae3ca8>):
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.5ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:23:36 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.3ms)
+
+ActionView::MissingTemplate (Missing template users/hc123/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/Users/hank8652/Desktop/LinkSport/app/views"
+):
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (19.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.1ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:23:56 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template users/hc123/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/Users/hank8652/Desktop/LinkSport/app/views"
+):
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (16.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (45.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.5ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:23:57 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template users/hc123/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/Users/hank8652/Desktop/LinkSport/app/views"
+):
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (17.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:24:15 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.5ms)
+
+ActionView::MissingTemplate (Missing template users/hc123/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/Users/hank8652/Desktop/LinkSport/app/views"
+):
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (16.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.0ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:24:18 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.4ms)
+
+ActionView::MissingTemplate (Missing template users/hc123/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/Users/hank8652/Desktop/LinkSport/app/views"
+):
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (16.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.0ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:24:44 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+ActionView::MissingTemplate (Missing template users/hc123/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/Users/hank8652/Desktop/LinkSport/app/views"
+):
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (19.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.5ms)
+
+
+Started GET "/users/hc123" for ::1 at 2017-06-29 12:24:45 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hc123"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template users/hc123/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/Users/hank8652/Desktop/LinkSport/app/views"
+):
+  app/controllers/users_controller.rb:20:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (26.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.1ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:25:56 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.5ms)
+
+ActionView::MissingTemplate (Missing template users/molly/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml, :jbuilder]}. Searched in:
+  * "/Users/hank8652/Desktop/LinkSport/app/views"
+):
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (17.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (44.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (73.1ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:26:04 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (1.7ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 36ms (Views: 17.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:26:33 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/hank8652/Desktop/LinkSport/app/views/users/show.html.haml:6: unknown type of %string
+...alse_true_false_true_false((%h3.font-ch @user.first_name
+...                               ^
+/Users/hank8652/Desktop/LinkSport/app/views/users/show.html.haml:6: syntax error, unexpected end-of-input
+...alse_true_false_true_false((%h3.font-ch @user.first_name
+...                               ^):
+  app/views/users/show.html.haml:6: unknown type of %string
+  app/views/users/show.html.haml:6: syntax error, unexpected end-of-input
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.3ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:26:46 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (9.3ms)
+  Rendered _nav.html.haml (0.5ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:26:56 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (7.1ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:27:01 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (7.9ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:27:44 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (8.2ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:28:10 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `school' for #<User:0x007fba8467e6e8>):
+    28:                     %p 球隊/學校:
+    29:                   .training-content
+    30:                     %p
+    31:                       =@user.school
+    32:                 .user-info-block
+    33:                   .training-title
+    34:                     %p 城市:
+  app/views/users/show.html.haml:31:in `_app_views_users_show_html_haml___784324114148895926_70219531019800'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.1ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:28:53 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1  [["followee_id", 1]]
+  Rendered users/show.html.haml within layouts/application (17.8ms)
+  Rendered _nav.html.haml (0.4ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:29:04 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1  [["followee_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  Rendered users/show.html.haml within layouts/application (72.4ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 86ms (Views: 83.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:29:23 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/show.html.haml within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Inconsistent indentation: 13 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    55:           .athletic-record
+    56:             %p ITF 排名:
+    57:             %p
+    58:              =@user.itf
+    59:           .athletic-record
+    60:             %p UTR 排名:
+    61:             %p 10
+  app/views/users/show.html.haml:58
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.9ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:29:30 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1  [["followee_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  Rendered users/show.html.haml within layouts/application (12.5ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:30:17 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1[0m  [["followee_id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  Rendered users/show.html.haml within layouts/application (10.8ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/molly" for ::1 at 2017-06-29 12:30:44 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"molly"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1  [["followee_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  Rendered users/show.html.haml within layouts/application (11.0ms)
+  Rendered _nav.html.haml (0.3ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.1ms)

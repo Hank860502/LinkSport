@@ -17,6 +17,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    
+    # render edit_user_path
   end
 
   def update

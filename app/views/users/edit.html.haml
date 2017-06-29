@@ -10,10 +10,10 @@
             =image_tag @user.avatar_url
             = form_for @user do |f|
               %p
-                = f.label :password, "確認密碼"
-                = f.password_field :password_confirmation
+                = f.label "更換大頭貼"
+                = f.file_field :avatar, class: "avatar-upload"
               %a.waves-effect.waves-light.btn
-                = f.submit
+                = f.submit "更換大頭貼"
           .user-info-right
             .user-info-physical
               %p Right Handed
