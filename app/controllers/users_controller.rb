@@ -28,6 +28,8 @@ class UsersController < ApplicationController
 
   def update
     # for user toupload avatar
+    p params
+    p "==========="
     @user = current_user
     if @user.update(user_params)
       redirect_to user_path

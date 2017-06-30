@@ -4,38 +4,38 @@
 			%form.col.s12
 				.row
 					.input-field.col.s6
-						%input#first_name.validate{:value => @user.first_name, :type => "text"}/
-						%label{:for => "first_name"} First Name
+						=f.label :first_name
+						=f.text_field :first_name
 					.input-field.col.s6
-						%input#first_name.validate{:value => @user.last_name, :type => "text"}/
-						%label{:for => "last_name"} Last Name
+						=f.label :last_name
+						=f.text_field :last_name
 				.row
 					.input-field.col.s6
-						%input#first_name.validate{:value => @user.height, :type => "text"}/
-						%label{:for => "height"} Height
+						=f.label :height
+						=f.text_field :height
 					.input-field.col.s6
-						%input#first_name.validate{:value => @user.weight, :type => "text"}/
-						%label{:for => "weight"} Weight
+						=f.label :weight
+						=f.text_field :weight
 				.row
 					.input-field.col.s4
-						%input#first_name.validate{:value => @user.sat, :type => "text"}/
-						%label{:for => "sat"} SAT Score
+						=f.label :sat, "SAT"
+						=f.text_field :sat
 					.input-field.col.s4
-						%input#first_name.validate{:value => @user.act, :type => "text"}/
-						%label{:for => "act"} ACT Score
+						=f.label :act, "ACT"
+						=f.text_field :act
 					.input-field.col.s4
-						%input#first_name.validate{:value => @user.toefl, :type => "text"}/
-						%label{:for => "toefl"} TOEFL Score
+						=f.label :toefl, "TOEFL"
+						=f.text_field :toefl
 				.row
 					.input-field.col.s4
-						%input#first_name.validate{:value => @user.itf, :type => "text"}/
-						%label{:for => "itf"} ITF Ranking
+						=f.label :itf, "ITF 排名"
+						=f.text_field :itf
 					.input-field.col.s4
-						%input#first_name.validate{:value => @user.utr, :type => "text"}/
-						%label{:for => "utr"} Universal Tennis Rating
+						=f.label :utr, "Universal Tennis Rating"
+						=f.text_field :utr
 					.input-field.col.s4
-						%input#first_name.validate{:value => @user.ntr, :type => "text"}/
-						%label{:for => "ntr"} National Ranking
+						=f.label :ntr, "全國排名"
+						=f.text_field :ntr
 				.row
 					.input-field.col.s12
 						%input#disabled.validate{:disabled => "disabled", :type => "text", :value => "I am not editable"}/
