@@ -1,23 +1,39 @@
-.row
-  %form.col.s12
-    .row
-      .input-field.col.s6
-        %input#first_name.validate{:disabled => "disabled", :value => @user.first_name, :type => "text"}/
-        %label{:for => "first_name"} First Name
-      .input-field.col.s6
-        %input#first_name.validate{:disabled => "disabled", :value => @user.last_name, :type => "text"}/
-        %label{:for => "first_name"} Last Name
-    .row
-      .input-field.col.s12
-        %input#disabled.validate{:disabled => "disabled", :type => "text", :value => "I am not editable"}/
-        %label{:for => "disabled"} Disabled
-    .row
-      .input-field.col.s6
-        %input#first_name.validate{:placeholder => "Placeholder", :type => "text"}/
-        %label{:for => "first_name"} First Name
-    / .row
-    /   .col.s12
-    /     This is an inline input field:
-    /     .input-field.inline
-    /       %input#email.validate{:type => "email"}/
-    /       %label{"data-error" => "wrong", "data-success" => "right", :for => "email"} Email
+.section{:class => "edit-page"}
+	= form_for @user do |f|
+		.row
+			%form.col.s12
+				.row
+					.input-field.col.s6
+						%input#first_name.validate{:value => @user.first_name, :type => "text"}/
+						%label{:for => "first_name"} First Name
+					.input-field.col.s6
+						%input#first_name.validate{:value => @user.last_name, :type => "text"}/
+						%label{:for => "first_name"} Last Name
+				.row
+					.input-field.col.s12
+						%input#disabled.validate{:disabled => "disabled", :type => "text", :value => "I am not editable"}/
+						%label{:for => "disabled"} Disabled
+				.row
+					.input-field.col.s6
+						%input#first_name.validate{:placeholder => "Placeholder", :type => "text"}/
+						%label{:for => "first_name"} First Name
+				.row
+					.input-field.col.s3
+						%input#test1.with-gap{:name => "group1", :type => "radio"}/
+						%label{:for => "test1"} 右手持拍
+						%input#test2.with-gap{:name => "group1", :type => "radio"}/
+						%label{:for => "test2"} 左手持拍
+					.input-field.col.s3
+						%input#test3.with-gap{:name => "group2", :type => "radio"}/
+						%label{:for => "test3"} 雙手反拍
+						%input#test4.with-gap{:name => "group2", :type => "radio"}/
+						%label{:for => "test4"} 單手反拍
+			%a.waves-effect.waves-light.btn
+				= f.submit
+	
+/		    .row
+/		      .col.s12
+/		        This is an inline input field:
+/		        .input-field.inline
+/		          %input#email.validate{:type => "email"}/
+/		          %label{"data-error" => "wrong", "data-success" => "right", :for => "email"} Email
