@@ -42560,3 +42560,410 @@ Processing by UsersController#edit as HTML
   Rendered _nav.html.haml (0.7ms)
   Rendered _flash.html.haml (0.1ms)
 Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:39:19 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Inconsistent indentation: "\t\t\t\t\t  " used for indentation, but the rest of the document was indented using 1 tab.):
+    38: 						=f.text_field :ntr
+    39: 				.row
+    40: 					.input-field.col.s6
+    41: 					  %i.material-icons.prefix mode_edit
+    42: 					  %textarea#icon_prefix2.materialize-textarea
+    43: 					  %label{:for => "icon_prefix2"} First Name
+    44: 
+  app/views/users/edit.html.haml:41
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:39:30 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (10.9ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:39:40 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (10.8ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:39:45 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (11.0ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:39:47 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (11.3ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:40:00 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (11.4ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:40:43 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (11.6ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:40:58 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (11.7ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:41:05 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (10.5ms)
+  Rendered _nav.html.haml (0.6ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:41:09 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (9.6ms)
+  Rendered _nav.html.haml (0.6ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:41:33 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (11.2ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:42:00 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/hank8652/Desktop/LinkSport/app/views/users/edit.html.haml:44: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...xt_field.materialize-textarea :about
+...                               ^):
+  app/views/users/edit.html.haml:44: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:42:03 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/hank8652/Desktop/LinkSport/app/views/users/edit.html.haml:44: syntax error, unexpected tSYMBEG, expecting '('
+...lse_true_false((f.text_field. :about
+...                               ^):
+  app/views/users/edit.html.haml:44: syntax error, unexpected tSYMBEG, expecting '('
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:42:05 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (11.1ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:43:54 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %i and nested within it.):
+    39: 				.row
+    40: 					.input-field.col.s12
+    41: 						%i.material-icons.prefix mode_edit
+    42: 							=f.label :about, "關於我"
+    43: 							=f.text_text_area :about, class: 'materialize-textarea', id: "icon_prefix2"
+    44: 
+    45: 				.row
+  app/views/users/edit.html.haml:42
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.7ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:44:10 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `text_text_area' for #<ActionView::Helpers::FormBuilder:0x007fcd846fb978>):
+    40: 					.input-field.col.s12
+    41: 						%i.material-icons.prefix mode_edit
+    42: 						=f.label :about, "關於我"
+    43: 						=f.text_text_area :about, class: 'materialize-textarea', id: "icon_prefix2"
+    44: 
+    45: 				.row
+    46: 					.input-field.col.s12
+  app/views/users/edit.html.haml:43:in `block in _app_views_users_edit_html_haml___2652117711526458848_70260397177520'
+  app/views/users/edit.html.haml:2:in `_app_views_users_edit_html_haml___2652117711526458848_70260397177520'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:44:19 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %i and nested within it.):
+    39: 				.row
+    40: 					.input-field.col.s12
+    41: 						%i.material-icons.prefix mode_edit
+    42: 							=f.label :about, "關於我"
+    43: 							=f.text_text_area :about, class: 'materialize-textarea', id: "icon_prefix2"
+    44: 
+    45: 				.row
+  app/views/users/edit.html.haml:42
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.8ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:44:44 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `text_text_area' for #<ActionView::Helpers::FormBuilder:0x007fcd84777640>):
+    40: 					.input-field.col.s12
+    41: 						%i.material-icons.prefix mode_edit
+    42: 						=f.label :about, "關於我"
+    43: 						=f.text_text_area :about, class: 'materialize-textarea', id: "icon_prefix2"
+    44: 
+    45: 				.row
+    46: 					.input-field.col.s12
+  app/views/users/edit.html.haml:43:in `block in _app_views_users_edit_html_haml___2652117711526458848_70260414088900'
+  app/views/users/edit.html.haml:2:in `_app_views_users_edit_html_haml___2652117711526458848_70260414088900'
+
+
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/hank8652/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.1ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:44:50 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (10.6ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2017-06-30 17:45:03 +0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YiFGMoNhNAgxoCyZmJx10KJZ2YzeblDAxA8ZNhS0A2T8RfX8ttfW7NrHOx2Qprpt1kBpMrstq7MJ/B71yOBISg==", "user"=>{"first_name"=>"漢宇", "last_name"=>"陳", "height"=>"185.0", "weight"=>"78.0", "sat"=>"1780", "act"=>"", "toefl"=>"97", "itf"=>"315", "utr"=>"11", "ntr"=>"30", "about"=>"嗨\r\n"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameters: first_name, last_name
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('hank@hank.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "about" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["about", "嗨\r\n"], ["updated_at", "2017-06-30 09:45:03.782520"], ["id", 1]]
+  [1m[35m (5.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 12ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-30 17:45:03 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1[0m  [["followee_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1  [["follower_id", 1]]
+  Rendered users/show.html.haml within layouts/application (5.0ms)
+  Rendered _nav.html.haml (0.5ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:45:06 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (4.1ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.2ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/1" for ::1 at 2017-06-30 17:45:10 +0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nXCh68cdtkc556fBOnG8Lk5pnIZMcywdoq/pL0OROjsDFBIl8qtUo9KAsEUyS3OTOnAsOCkw125vXO7sn8VxFQ==", "user"=>{"first_name"=>"漢宇", "last_name"=>"陳", "height"=>"185.0", "weight"=>"78.0", "sat"=>"1780", "act"=>"", "toefl"=>"97", "itf"=>"315", "utr"=>"11", "ntr"=>"30", "about"=>"嗨\r\n"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameters: first_name, last_name
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('hank@hank.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for ::1 at 2017-06-30 17:45:10 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."follower_id" WHERE "followings"."followee_id" = $1  [["followee_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "followings" ON "users"."id" = "followings"."followee_id" WHERE "followings"."follower_id" = $1[0m  [["follower_id", 1]]
+  Rendered users/show.html.haml within layouts/application (4.8ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2017-06-30 17:45:13 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/edit.html.haml within layouts/application (3.4ms)
+  Rendered _nav.html.haml (0.7ms)
+  Rendered _flash.html.haml (0.1ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms)
