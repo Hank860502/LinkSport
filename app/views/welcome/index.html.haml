@@ -12,7 +12,9 @@
 						.col.s3.m3
 							%img.responsive-img{:alt => "profile image", :src => "#{tweet.user.avatar_url}"}/
 					.card-content.white-text
-						%span.card-title= tweet.user.username
+						%span.card-title
+							= link_to tweet.user.username, user_path(tweet.user)
+
 						%p= tweet.body
 						%p= tweet.created_at.to_formatted_s(:db)
 					.card-action

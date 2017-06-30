@@ -22,6 +22,8 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+    p @user
+    p @user.first_name
   end
 
   def update
