@@ -100,3 +100,7 @@
         = @user.about
     .user-page-right
       right
+      -if @user.double_handed_backhand
+        %p double
+      -else
+        %p single

@@ -50,15 +50,15 @@
 				/ 		=f.text_field :created_at, disabled: "diabled"
 				.row
 					.input-field.col.s3
-						%input#righthanded.with-gap{:name => "group1", :value => true, :type => "radio"}/
-						%label{:for => "righthanded", :value => "true"} 右手持拍
-						%input#lefthanded.with-gap{:name => "group1", :value => false, :type => "radio"}/
-						%label{:for => "lefthanded", :value => "false"} 左手持拍
+						=f.radio_button :righthanded, false, :checked => true, value: false, class: "with-gap"
+						=f.label :righthanded, "左手持拍", value: false, name: "group1"
+						=f.radio_button :righthanded, true, value: true, class: "with-gap"
+						=f.label :righthanded, "右手持拍", value: true, name: "group1"
 					.input-field.col.s3
-						%input#test3.with-gap{:name => "group2", :type => "radio"}/
-						%label{:for => "test3"} 雙手反拍
-						%input#test4.with-gap{:name => "group2", :type => "radio"}/
-						%label{:for => "test4"} 單手反拍
+						=f.radio_button :double_handed_backhand, false, :checked => true, value: false, class: "with-gap"
+						=f.label :double_handed_backhand, "單手反拍", value: false, name: "group2"
+						=f.radio_button :double_handed_backhand, true, value: true, class: "with-gap"
+						=f.label :double_handed_backhand, "雙手反拍", value: true, name: "group2"
 			%a.waves-effect.waves-light.btn.col.s6.center-align
 				= f.submit
 	
