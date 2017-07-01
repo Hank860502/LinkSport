@@ -21,20 +21,19 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = current_user
-    p @user
-    p @user.first_name
+    if current_user.id.to_s == params[:id]
+      @user = current_user
+    else
+      redirect_to user_path
+    end
   end
 
   def update
-    # for user toupload avatar
-    p params
-    p "==========="
     @user = current_user
     if @user.update(user_params)
       redirect_to user_path
     else
-      flash[:error] = "暫時無法上傳照片"
+      flash[:error] = "暫時無法完成上傳"
       redirect_to user_path
     end
   end

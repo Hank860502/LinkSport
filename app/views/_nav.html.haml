@@ -14,14 +14,14 @@
       %ul#nav-mobile.right
         - if current_user && current_user.admin
           %li
-            =link_to "Admin", admin_path
+            =link_to "管理者", admin_path
         - if current_user
           %li
             = link_to "#{current_user.username}", user_path(current_user.id)
           %li
-            =link_to "Log out", logout_path, method: "delete"
+            =link_to "登出", logout_path, method: "delete"
         -else
           %li
-            =link_to "Log in", login_path
+            =link_to "登入", login_path
           %li
-            =link_to 'Register', register_path
+            =link_to "註冊", register_path

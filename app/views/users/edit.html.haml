@@ -3,18 +3,21 @@
 		.row
 			%form.col.s12
 				.row
-					.input-field.col.s6
-						=f.label :first_name
+					.input-field.col.s4
+						=f.label :first_name, "名"
 						=f.text_field :first_name
-					.input-field.col.s6
-						=f.label :last_name
+					.input-field.col.s4
+						=f.label :last_name, "姓"
 						=f.text_field :last_name
+					.input-field.col.s4
+						=f.label :email, "信箱"
+						=f.text_field :email
 				.row
 					.input-field.col.s6
-						=f.label :height
+						=f.label :height, "身高"
 						=f.text_field :height
 					.input-field.col.s6
-						=f.label :weight
+						=f.label :weight, "體重"
 						=f.text_field :weight
 				.row
 					.input-field.col.s4
@@ -40,16 +43,11 @@
 					.input-field.col.s12
 						%i.material-icons.prefix mode_edit
 						=f.label :about, "關於我"
-						=f.text_area :about, class: 'materialize-textarea', id: "icon_prefix2"
-
-				.row
-					.input-field.col.s12
-						%input#disabled.validate{:disabled => "disabled", :type => "text", :value => "I am not editable"}/
-						%label{:for => "disabled"} Disabled
-				.row
-					.input-field.col.s6
-						%input#first_name.validate{:placeholder => "Placeholder", :type => "text"}/
-						%label{:for => "first_name"} First Name
+						=f.text_area :about, class: 'materialize-textarea'
+				/ .row
+				/ 	.input-field.col.s12
+				/ 		=f.label :created_at, "加入日期"
+				/ 		=f.text_field :created_at, disabled: "diabled"
 				.row
 					.input-field.col.s3
 						%input#righthanded.with-gap{:name => "group1", :value => true, :type => "radio"}/
