@@ -76,7 +76,7 @@ label{
 	justify-content: center;
 }
 
-.user-info img{
+.user-info img, .edit-user-avatar img{
 	height: 128px;
 	width: 128px;
 	border-radius: 50%;
@@ -160,4 +160,9 @@ label{
 	margin: 2rem auto;
 	padding: 18px; 
 	background-color: #ffffff;
+}
+
+.edit-user-avatar{
+	display: flex;	
+	flex-direction: column;
 }

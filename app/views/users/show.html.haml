@@ -9,14 +9,7 @@
             =@user.first_name
         .user-info
           .user-avatar
-            =image_tag @user.avatar_url
-            -if @user == current_user
-              = form_for @user do |f|
-                %p
-                  = f.label "更換大頭貼"
-                  = f.file_field :avatar, class: "avatar-upload"
-                %a.waves-effect.waves-light.btn
-                  = f.submit "更換大頭貼"
+            =image_tag @user.avatar_url, class: "materialboxed"
           .user-info-right
             .user-info-physical
               -if @user.righthanded

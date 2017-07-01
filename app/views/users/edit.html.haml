@@ -3,6 +3,10 @@
 		.row
 			%form.col.s12
 				.row
+					.input-field.col.s12.edit-user-avatar
+						= f.label :avatar, "個人照片"
+						= f.file_field :avatar
+				.row
 					.input-field.col.s4
 						=f.label :first_name, "名"
 						=f.text_field :first_name
