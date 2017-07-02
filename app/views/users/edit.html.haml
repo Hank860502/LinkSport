@@ -1,11 +1,12 @@
 .section{:class => "edit-page"}
+	%div.edit-user-avatar
+		=image_tag @user.avatar_url, class: "materialboxed"
 	= form_for @user do |f|
 		.row
 			%form.col.s12
-				.row
-					.input-field.col.s12.edit-user-avatar
-						= f.label :avatar, "個人照片"
-						= f.file_field :avatar
+				.row.center
+					= f.label :avatar, "個人照片"
+					= f.file_field :avatar
 				.row
 					.input-field.col.s4
 						=f.label :first_name, "名"

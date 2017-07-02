@@ -140,10 +140,6 @@ label{
  	background-color: #ffffff;
 }
 
-.avatar-upload{
-	color: red;
-}
-
 /*=====User Page Right=====*/
 
 
@@ -163,6 +159,6 @@ label{
 }
 
 .edit-user-avatar{
-	display: flex;	
-	flex-direction: column;
+	display: flex;
+	justify-content: center;
 }
