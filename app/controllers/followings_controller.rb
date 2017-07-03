@@ -3,7 +3,7 @@ class FollowingsController < ApplicationController
     @following = Following.new
 	end
 	def create
-		@following = Following.new(following_params)
+		@following = Following.new(follower_id: params[:follower], followee_id: params[:followee])
 
 		if @following.save
       # flash[:success] = "已成功追蹤此使用者"

@@ -10,6 +10,16 @@
         .user-info
           .user-avatar
             =image_tag @user.avatar_url, class: "materialboxed"
+            -if @user == current_user
+            -elsif @user.followers.include?(current_user)
+              Unfollow
+              = link_to "取消追蹤", unfollow_path(follower: current_user.id, followee: @user.id), method: "delete", class: "btn waves-effect waves-light light-blue"
+            -else
+              follow
+              - if current_user
+                = link_to "追蹤", follow_path(follower: current_user, followee: @user.id), method: "post", class: "btn waves-effect waves-light light-blue"
+              - else 
+                = link_to "追蹤", new_user_path, class: "btn waves-effect waves-light light-blue"
           .user-info-right
             .user-info-physical
               -if @user.righthanded

@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  get 'follow' => 'followings#new'
   post 'follow' => 'followings#create'
   delete 'unfollow' => 'followings#destroy'
   get 'register' => 'users#new'
