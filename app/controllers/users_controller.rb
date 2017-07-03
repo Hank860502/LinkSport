@@ -48,7 +48,7 @@ class UsersController < ApplicationController
     else
       flash[:error] = "找不到使用者"
       # redirect_to user_path(current_user.id)
-      redirect_to request.referrer
+      redirect_to request.referer
     end
   end
 

@@ -22,8 +22,11 @@
 							%a.btn.waves-effect.waves-light.orange{:href => "/tweets/#{tweet.id}/like"}
 								= tweet.likes.count
 								Likes
-							- if tweet.user.followers.include?(@current_user)
-								%a.btn.waves-effect.waves-light.light-blue{:href => "/users/#{@current_user.id}/follow/#{tweet.user.id}/destroy"} Unfollow
+							- if tweet.user.followers.include?(@user)
+								%a.btn.waves-effect.waves-light.light-blue
+									=@user.id
+									=tweet.user
+									= link_to "取消追蹤", unfollow_path(follower: @user.id, followee: tweet.user.id), method: "delete"
 							- else
 								%a.btn.waves-effect.waves-light.light-blue{:href => "/users/#{@current_user.id}/follow/#{tweet.user.id}"} Follow
 	-else
