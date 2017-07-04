@@ -55,11 +55,11 @@
               .training-right
                 .user-social
                   .user-followers
-                    = link_to "追蹤人數", followers_user_path
+                    = link_to "追蹤人數", followees_user_path
                     %p
-                      =@user.followers.count
+                      =@user.followees.count
                   .user-followees
-                    = link_to "粉絲人數", followees_user_path
+                    = link_to "粉絲人數", followers_user_path
                     %p
                       =@user.followers.count
         -if @user == current_user

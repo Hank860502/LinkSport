@@ -21,7 +21,8 @@ User.create!(
     last_name: Faker::Name.last_name,
     username: Faker::Internet.user_name,
     email: Faker::Internet.email,
-    password: "123123"
+    password: "123123",
+    about: Faker::Hipster.sentence
     # avatar: Faker::Avatar.image,
     # itf:,
     # utr:,
@@ -34,7 +35,6 @@ User.create!(
     # toefl:,
     # act:,
     # birthday:,
-    # about:
       )
   )
 end
