@@ -59,9 +59,9 @@
                     %p
                       =@user.followers.count
                   .user-followees
-                    %p 粉絲
+                    = link_to "粉絲人數", followees_user_path
                     %p
-                      =@user.followees.count
+                      =@user.followers.count
         -if @user == current_user
           %a.waves-effect.waves-light.btn{:href => "/users/#{@user.id}/edit"} update file
       %section.user-page-left-athletic

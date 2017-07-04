@@ -1,1 +1,18 @@
-asfd
+%section.followers
+  %ul#tabs-swipe-demo.tabs
+    %li.tab.col.s3
+      %a{:href => "#test-swipe-1"} 追蹤人數
+    %li.tab.col.s3
+      %a{:href => "#test-swipe-2"} 粉絲人數
+  #test-swipe-1.col.s12.white
+    %ul
+      - @followers.each do |follower|
+        %li.followers-list 
+          =link_to image_tag(follower.avatar_url), user_path(follower), class: "follower-avatar"
+        %li.divider
+  #test-swipe-2.col.s12.white
+    %ul
+      - @followees.each do |followee|
+        %li.followers-list 
+          =link_to image_tag(followee.avatar_url), user_path(followee), class: "follower-avatar"
+        %li.divider

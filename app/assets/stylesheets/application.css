@@ -162,3 +162,25 @@ label{
 	display: flex;
 	justify-content: center;
 }
+
+
+/*=====Followers Page*/
+.followers{
+	width: 80%;
+	margin: auto
+}
+
+.follower-avatar img{
+	height:72px;
+	width: 72px;
+	border-radius: 50%
+}
+
+.followers-list{
+	padding: 0.5rem 1rem;
+}
+
+ul .divider{
+	width: 85%;
+	float: right;
+}
