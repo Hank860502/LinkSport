@@ -53,6 +53,12 @@ class UsersController < ApplicationController
   end
 
   def followers
+    p params
+    p "==========="
+    @user = User.find(params[:id])
+    p @user
+    @followees = @user.followees
+    @followers = @user.followers
   end
 
   def followees

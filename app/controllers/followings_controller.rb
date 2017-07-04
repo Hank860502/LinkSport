@@ -19,7 +19,7 @@ class FollowingsController < ApplicationController
   	@following.destroy
   	redirect_to request.referrer
 	end
-
+	
 	private
 	def following_params
 	params.require(:following).permit(:follower_id, :followee_id)

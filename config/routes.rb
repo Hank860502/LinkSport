@@ -2,7 +2,12 @@ Rails.application.routes.draw do
 
   root  'welcome#index'
 
-  resources :users
+  resources :users do 
+    member do
+      get :followers
+      get :followees
+    end
+  end
   resources :sessions
   resources :welcome
   resources :tweets

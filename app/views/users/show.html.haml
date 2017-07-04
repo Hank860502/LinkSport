@@ -12,10 +12,8 @@
             =image_tag @user.avatar_url, class: "materialboxed"
             -if @user == current_user
             -elsif @user.followers.include?(current_user)
-              Unfollow
               = link_to "取消追蹤", unfollow_path(follower: current_user.id, followee: @user.id), method: "delete", class: "btn waves-effect waves-light light-blue"
             -else
-              follow
               - if current_user
                 = link_to "追蹤", follow_path(follower: current_user, followee: @user.id), method: "post", class: "btn waves-effect waves-light light-blue"
               - else 
@@ -26,6 +24,10 @@
                 %p Righthanded
               -else
                 %p Lefthanded
+              -if @user.double_handed_backhand
+                %p Double Handed Backhand
+              -else
+                %p Single Handed Backhand
               -if @user.height.present?
                 %p
                   = @user.height
@@ -53,7 +55,7 @@
               .training-right
                 .user-social
                   .user-followers
-                    %p 追蹤人數
+                    = link_to "追蹤人數", followers_user_path
                     %p
                       =@user.followers.count
                   .user-followees
