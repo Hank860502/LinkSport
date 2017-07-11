@@ -103,9 +103,11 @@
             %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/videoseries?list=PLmVw0Ou6nvAD0SLC2QjXySCgTQur9Xj3r", :width => "853"}
       %section.user-page-left-about
         = @user.about
+      %section.user-page-left-tweets
+        %ul
+          - @tweets.each do |tweet|
+            %div.follower-href
+              = tweet.body
+            %li.divider
     .user-page-right
       right
-      -if @user.double_handed_backhand
-        %p double
-      -else
-        %p single

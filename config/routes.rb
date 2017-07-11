@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     member do
       get :followers
       get :followees
+      get :tweets
     end
   end
   resources :sessions

@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @tweets = @user.tweets
     # render edit_user_path
   end
 
@@ -62,6 +63,11 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
     @followees = @user.followees
     @followers = @user.followers
+  end
+
+  def tweets
+    @user = User.find(params[:id])
+    @tweets = @user.tweets
   end
 
   private
