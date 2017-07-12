@@ -14,7 +14,10 @@ body{
   background: #e6e9ec;
 }
 
-
+.section-title{
+	font-weight: bold;
+	font-style: italic;
+}
 /*=====Navbar=====*/
 .nav-wrapper{
 	background: #283e4a;
@@ -131,7 +134,7 @@ label{
 	width: 100%;
 }
 
-/*=======athletic=====*/
+/*=======Athletic=====*/
 .user-page-left-athletic, .user-page-left-about, .user-page-left-tweets{
   margin-top: 2rem;
  	background-color: #ffffff;
@@ -143,6 +146,10 @@ label{
 	justify-content: space-around;	
 }
 
+/*====About Section======*/
+.user-page-left-about p{
+	padding: 0 1rem;
+}
 /*=====User Page Right=====*/
 
 
