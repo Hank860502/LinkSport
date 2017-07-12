@@ -115,20 +115,20 @@ label{
 	justify-content: space-between;
 	width: 100%;
 	text-align: left;
+	height: 50%;
 }
 
 .training-left, .training-right{
 	width: 50%;
-}
 
-.user-social{
-	width: 100%;
 }
 
 .user-followers, .user-followees{
 	display: flex;
 	justify-content: space-around;
 	font-size: 15px;
+	margin: auto;
+	width: 100%;
 }
 
 /*=======athletic=====*/

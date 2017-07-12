@@ -53,15 +53,14 @@
                   .training-content
                     %p 台中
               .training-right
-                .user-social
+                .user-info-block
                   .user-followers
                     = link_to "追蹤人數", followees_user_path
-                    %p
-                      =@user.followees.count
+                    = link_to @user.followees.count, followees_user_path
+                .user-info-block
                   .user-followees
                     = link_to "粉絲人數", followers_user_path
-                    %p
-                      =@user.followers.count
+                    = link_to @user.followers.count, followers_user_path
         -if @user == current_user
           %a.waves-effect.waves-light.btn{:href => "/users/#{@user.id}/edit"} update file
       %section.user-page-left-athletic
@@ -111,3 +110,4 @@
             %li.divider
     .user-page-right
       right
+      最近到訪過你的檔案
