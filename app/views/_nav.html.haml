@@ -19,6 +19,8 @@
           %li
             = link_to "#{current_user.username}", user_path(current_user.id)
           %li
+            = link_to "發文", new_tweet_path
+          %li
             =link_to "登出", logout_path, method: "delete"
         -else
           %li

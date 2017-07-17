@@ -17,6 +17,9 @@ body{
 .section-title{
 	font-weight: bold;
 	font-style: italic;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin: 0;
 }
 /*=====Navbar=====*/
 .nav-wrapper{
@@ -41,7 +44,9 @@ body{
 .container{
 	justify-content: center;
 }
-
+.card{
+	padding: 1rem 0 0 0.5rem;
+}
 
 /*Login page*/
 label{

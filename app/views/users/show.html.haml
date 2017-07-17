@@ -77,7 +77,7 @@
             %p
               =@user.itf
           .athletic-record
-            %p UTR 排名:
+            %p UTR 級數:
             %p
               =@user.utr
           .athletic-record
@@ -101,11 +101,13 @@
           .video-container
             %iframe{:allowfullscreen => "", :frameborder => "0", :height => "480", :src => "https://www.youtube.com/embed/videoseries?list=PLmVw0Ou6nvAD0SLC2QjXySCgTQur9Xj3r", :width => "853"}
       %section.user-page-left-about
-        %h5.section-title 關於我
+        %h3.section-title.font-en About
+        %h3.section-title.font-ch 關於我
         %p
           = @user.about
       %section.user-page-left-tweets
-        %h5.section-title 我的貼文
+        %h3.section-title.font-ch Posts
+        %h3.section-title.font-ch 我的貼文
         %ul
           - @tweets.each do |tweet|
             %div.follower-href
