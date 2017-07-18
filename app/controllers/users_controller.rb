@@ -72,6 +72,15 @@ class UsersController < ApplicationController
 
   def email
     @user = User.find(params[:id])
+    if @user.itf.present? && @user.utr.present? && @user.gpa.present? && @user.skype.present? && @user.country.present? && @user.sat.present? && @user.toefl.present? && @user.act.present?
+      @itf = @user.itf.to_s
+      @utr = @user.utr.to_s
+      @gpa = @user.gpa.to_s
+      @sat = @user.sat.to_s
+    else
+      redirect_to request.referer
+      flash[:error] = "你的資料還不夠齊全喔"
+    end
   end
 
   private

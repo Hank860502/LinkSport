@@ -1,8 +1,8 @@
 %div.card-panel.teal.lighten-3.center-align.register-form
   = form_for @tweet do |f|
     %p
-      = f.label :body
+      = f.label :body, "你在想什麼"
       = f.text_field :body
       = f.hidden_field :user_id, value: @user.id
     %a.waves-effect.waves-light.btn
-      = f.submit
+      = f.submit "發送新文章"

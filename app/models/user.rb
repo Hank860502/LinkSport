@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   before_save { self.email = email.downcase }
-  validates :first_name, :last_name, :email, :username,  presence: true, length: { maximum: 50 }
+  validates :first_name, :last_name, :first_name_en, :last_name_en, :email, :username,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },

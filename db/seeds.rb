@@ -26,6 +26,8 @@ User.create!(
   User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
+  first_name_en: Faker::Name.first_name,
+  last_name_en: Faker::Name.last_name,
   username: Faker::Internet.user_name,
   email: Faker::Internet.email,
   password: "123123",
