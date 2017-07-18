@@ -17,7 +17,7 @@
             =link_to "管理者", admin_path
         - if current_user
           %li
-            = link_to "#{current_user.username}", user_path(current_user.id)
+            = link_to @user.last_name + @user.first_name, user_path(current_user.id)
           %li
             = link_to "發文", new_tweet_path
           %li

@@ -1,5 +1,13 @@
-%p
-	= "Dear Coach, This is" + @user.first_name + @user.last_name + ", and I am aspiring to play inter-collegiate tennis in the U.S. My highest ITF career ranking was " + @user.itf.to_s + " and my UTR is " + @user.utr.to_s + ". I am currently being trained at Hope Tennis Academy which has a really international and professional team composed of top players from eight countries and eminent coaches providing a thorough physical analysis and tennis program. Therefore, I would love to further develop my interests in strength training, computer science and business in college. For your reference, the link below is a highlight video of my playing at Taiwan National game:https://youtu.be/j8YOBjCok2U Regarding of my academic performance, my GPA was USER.GPA, and I scored an " + @user.sat.to_s + " out of 1600 on my SAT. I would like to politely ask you if I have any chance to be a part of your team in the fall of 2018. I am willing to answer any further questions you may have, so please don't hesitate to contact me. I can be reached by " + @user.email + ", and my head coach Tom Kindavong can be reached bykindavongtom@hotmail.com Thank you so much for your time and I look forward to talking to you via Skype (ID: hank860502) very soon. Sincerely, Han-Yu Chen/ Athlete Email: hank860502@gmail.com Skype: hank860502"
+%div.container
+	%div#content
+		%p
+			= "Dear Coach, This is " + @user.first_name_en + " " + @user.last_name_en + " from " + @user.country + ", and I am aspiring to play inter-collegiate tennis in the U.S. My highest ITF career ranking was " + @user.itf.to_s + " and my UTR is " + @user.utr.to_s + ". I am currently being trained at " + @user.academy +  " which has a really international and professional team composed of top players from different countries and eminent coaches providing a thorough physical analysis and tennis program. Therefore, I would love to further develop my interests in strength training, computer science and business in college. For your reference, the link below is a highlight video of my playing at Taiwan National game:https://youtu.be/j8YOBjCok2U Regarding of my academic performance, my GPA was " + @user.gpa.to_s + ", and I scored an " + @user.sat.to_s + " out of 1600 on my SAT. I would like to politely ask you if I have any chance to be a part of your team in the fall of 2018. I am willing to answer any further questions you may have, so please don't hesitate to contact me. I can be reached by " + @user.email + ", and my head coach Tom Kindavong can be reached bykindavongtom@hotmail.com Thank you so much for your time and I look forward to talking to you via Skype (ID: " + @user.skype + ") very soon. To see more of my information please go to"
+			%a{href:"https://www.hankchentennis.com"} My profile
+			%p
+				= "Sincerely, Han-Yu Chen/ Athlete Email: " + @user.email + " Skype: " + @user.skype
+	.btn.blue.copy{onclick:"copyToClipboard('#content')"}
+		%i.material-icons attach_file
+		copy
 
 
-/ and I have won the championship of the 2015 National High School Athletic Games in Taiwan.
+	/ and I have won the championship of the 2015 National High School Athletic Games in Taiwan.
