@@ -114,5 +114,7 @@
               = tweet.body
             %li.divider
     .user-page-right
-      right
-      最近到訪過你的檔案
+      %div.col.s12
+        最近到訪過你的檔案
+      .btn 
+        =link_to "產生信", email_user_path

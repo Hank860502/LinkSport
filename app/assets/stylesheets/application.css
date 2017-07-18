@@ -161,8 +161,9 @@ label{
 .user-page-right{
 	width: 30%;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	background-color: #e6e9ec;
+	text-align: center;
 }
 
 /*======Edit Page=====*/

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get :followers
       get :followees
       get :tweets
+      get :email
     end
   end
   resources :sessions
