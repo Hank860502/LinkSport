@@ -20,6 +20,13 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :act
       t.date :birthday
       t.text :about
+      # gpa
+      # study_of_interest
+      # training_place / school
+      # city
+      # season_applying (Fall, 2017)
+      # coach
+      # skype
 
       t.timestamps null: false
     end
