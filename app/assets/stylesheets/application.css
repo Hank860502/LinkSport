@@ -221,4 +221,11 @@ ul .divider{
 	float: right;
 }
 
+/*=====email=====*/
+.copy{
+	display: flex;
+	justify-content: center;
+	
+}
+
 

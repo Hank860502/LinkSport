@@ -28,7 +28,7 @@
 									Likes
 								- if tweet.user.followers.include?(@user)
 									= link_to "取消追蹤", unfollow_path(follower: @user.id, followee: tweet.user.id), method: "delete", class: "btn waves-effect waves-light light-blue"
+								- elsif tweet.user = @user
 								- else
 									= link_to "追蹤", follow_path(follower: @user.id, followee: tweet.user.id), method: "delete", class: "btn waves-effect waves-light light-blue"
-		-else
-			welcome
+		-else	
