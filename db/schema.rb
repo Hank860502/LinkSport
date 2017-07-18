@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(version: 20170616073916) do
     t.integer  "act"
     t.date     "birthday"
     t.text     "about"
+    t.string   "first_name_en"
+    t.string   "last_name_en"
+    t.decimal  "gpa"
+    t.string   "academy"
+    t.string   "country"
+    t.string   "city"
+    t.string   "skype"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
   end

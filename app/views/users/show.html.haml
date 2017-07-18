@@ -46,12 +46,14 @@
                   .training-title
                     %p 球隊/學校:
                   .training-content
-                    %p 大慶商工
+                    %p
+                      = @user.academy
                 .user-info-block
                   .training-title
                     %p 城市:
                   .training-content
-                    %p 台中
+                    %p
+                      = @user.city
               .training-right
                 .user-info-block
                   .user-followers
@@ -62,7 +64,8 @@
                     = link_to "粉絲人數", followers_user_path
                     = link_to @user.followers.count, followers_user_path
         -if @user == current_user
-          %a.waves-effect.waves-light.btn{:href => "/users/#{@user.id}/edit"} update file
+          .waves-effect.waves-light.btn
+            =link_to "編輯個人檔案", edit_user_path
       %section.user-page-left-athletic
         %ul#tabs-swipe-demo.tabs
           %li.tab.col.s3

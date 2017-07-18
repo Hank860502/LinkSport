@@ -20,10 +20,15 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :act
       t.date :birthday
       t.text :about
-      # gpa
+
+      t.string :first_name_en
+      t.string :last_name_en
+      t.decimal :gpa
+      t.string :academy
+      t.string :country
+      t.string :city
+      t.string :skype
       # study_of_interest
-      # training_place / school
-      # city
       # season_applying (Fall, 2017)
       # coach
       # skype
