@@ -113,7 +113,7 @@
         %h3.section-title.font-ch Posts
         %h3.section-title.font-ch 我的貼文
         %ul
-          - @tweets.each do |tweet|
+          - @tweets.reverse.each do |tweet|
             %div.follower-href
               = tweet.body
             %li.divider

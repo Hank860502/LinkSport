@@ -7,9 +7,9 @@
           %li
             =form_tag find_users_path do
               .input-field
+                %i.material-icons.prefix search
                 %input#search{:required => "", :type => "text", :name => "query"}
-                %label.label-icon{:for => "search"}
-                  %i.material-icons search
+                %label.label-icon.nav-search{:for => "search"}
 
       %ul#nav-mobile.right
         - if current_user && current_user.admin

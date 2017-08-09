@@ -39,6 +39,9 @@ body{
 	margin: 0 auto;
 }
 
+#search{
+	margin-left: 2.2rem;
+}
 
 /*=====Welcome Page=====*/
 .container{
