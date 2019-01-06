@@ -5,13 +5,18 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    respond_to do |format|
+      if @user.save
+        flash[:success] = "成功註冊新使用者"
+        format.html { redirect_to @user}
+        format.json { render :show, status: :created, location: @user }
 
-    if @user.save
-      flash[:success] = "成功註冊新使用者"
-      redirect_to root_path
-    else
-      flash[:error] = "資料不完整或有誤"
-      redirect_to new_user_path
+      else
+        flash[:error] = "資料不完整或有誤"
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+
+      end
     end
   end
 
